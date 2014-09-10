@@ -1,0 +1,45 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{lalo}
+
+
+\begin{document}
+
+\section*{Linear hydrodynamic equations for a superfluid confined with an external potential}
+The hydrodynamic equations are:
+\begin{equation}
+\partt \rho + \nabla\cdot\p{\rho\bm{v}} = 0
+\label{continuity}
+\end{equation}
+\begin{equation}
+\rho \p{ \partt \bm{v} + \frac{1}{2}\nabla \bm{v}^2 } = \nabla \cdot \sigma - \frac{\rho}{m}V_{ext}º
+\label{momentum}
+\end{equation}
+
+For a fluid that admits a descriprtion in terms of the GP equation, the corresponding stress tensor is:
+
+\begin{equation}
+\sigma_{ij} = \frac{\hbar^2}{4m^2}\partii\partjj \rho - \frac{g}{2m}\partii \rho^2 - \frac{\hbar^2}{m^2}\parti\partj\p{\parti\srho\partj\srho}.
+\end{equation}
+
+We'll be interested in a system confined by a harmonic trap, so $V_{ext} =	\frac{1}{2} m\omega_0^2$. Linearization of these equations starts when we propose a solution of the form $\rho = \rc + \ru$, where $\rc$ is constant in both space and time and a corresponding velocity field $\bm{v} = \vu$; we'll throw away terms with two \emph{one} functions, for example: $\ru^2$, $\vu\ru$. The resulting equations for $\ru$ and $\vu$ are:
+\begin{equation}
+\partt\ru + \nabla\cdot\p{\rc\vu} = 0
+\end{equation}
+\begin{equation}
+\rc\partt \p{\nabla\cdot\vu} = \nabla\cdot\nabla\cdot\sigma - \frac{\rc + \ru}{m}\nabla^2V_{ext} + \frac{1}{m}\nabla\ru\cdot\nabla V_{ext}
+\end{equation}
+
+The linear aproximation for the stress tensor gives:
+\begin{equation}
+\nabla\cdot\nabla\cdot\sigma \approx \p{\frac{\hbar^2}{4m^2}\nabla^2\nabla^2 \ru - \rc\frac{g}{m}\nabla^2 \ru }.
+\end{equation}
+
+After putting the corresponding form of the tensor, momentum conservation equation gives:
+
+\begin{equation}
+\parttt\ru + +\frac{\hbar^2}{4m^2}\nabla^2\nabla^2\ru + \frac{g}{m}\rc -\p{\rc+\ru}\omega^2_0 - \omega^2_0 \nabla\ru\cdot\bm{x} = 0.
+\end{equation}
+
+There's a problem with the las term in finding a dispersion relation. What to do?
+
+\end{document}
