@@ -1,0 +1,59 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{lalo}
+
+
+\begin{document}
+
+\section*{Linear hydrodynamic equations for a superfluid confined with an external potential}
+The hydrodynamic equations are:
+\begin{equation}
+\partt \rho + \nabla\cdot\p{\rho\bm{v}} = 0
+\label{continuity}
+\end{equation}
+\begin{equation}
+\rho \p{ \partt \bm{v} + \frac{1}{2}\nabla \bm{v}^2 } = \nabla \cdot \sigma - \frac{\rho}{m}\nabla V_{ext}
+\label{momentum}
+\end{equation}
+
+For a fluid that admits a descriprtion in terms of the GP equation, the corresponding stress tensor is:
+
+\begin{equation}
+\sigma_{ij} =
+\p{\frac{\hbar^2}{4m^2} \rho - \frac{g}{2m} \rho^2}\delta_{ij} - \frac{\hbar^2}{m^2}\p{\parti\srho\partj\srho}.
+\end{equation}
+
+We'll be interested in a system confined by a harmonic trap, so $V_{ext} =	\frac{1}{2} m\omega_0^2$. Linearization of these equations starts when we propose a solution of the form $\rho = \rc + \ru$, where $\rc$ is solution to
+\begin{equation}
+\partt\rc = 0,
+\end{equation}
+and
+\begin{equation}
+\nabla\cdot\nabla \cdot\sigma_0 = \frac{\rc}{m}\nabla^2V_{ext},
+\end{equation}
+where
+\begin{equation}
+\sigma_{0} = \p{\frac{\hbar^2}{4m^2} \rc - \frac{g}{2m} \rc^2} - \frac{\hbar^2}{m^2}\p{\nabla\sqrt{\rc}\nabla\sqrt{\rc}}.
+\end{equation}
+
+
+
+ and a corresponding velocity field $\bm{v} = \vu$; we'll throw away terms with two \emph{one} functions, for example: $\ru^2$, $\vu\ru$. The resulting equations for $\ru$ and $\vu$ are:
+\begin{equation}
+\partt\ru + \nabla\cdot\p{\rc\vu} = 0
+\end{equation}
+\begin{equation}
+\rc\partt \p{\nabla\cdot\vu} = \nabla\cdot\nabla\cdot\sigma_1 - \frac{\rc + \ru}{m}\nabla^2V_{ext} + \frac{1}{m}\nabla\ru\cdot\nabla V_{ext}.
+\end{equation}
+Where
+\begin{equation}
+\sigma_1 = \frac{\hbar^2}{4m}\ru - \frac{g}{m}\rc\ru -\frac{2}{3}\frac{\nabla\srho\nabla\p{\rc}^{3/2}}{\rc^2}\ru + 2\frac{\nabla\srhoc}{\srhoc}\nabla\ru +\nabla\srhoc\nabla\srhoc \frac{\ru}{\rc}
+\end{equation}
+is a tensor that permits us to write $\sigma \approx \sigma_0 + \sigma_1$ to first order.
+
+If $V_{ext}$ is an harmonic potential, we may interpret the the term with $\nabla\ru\cdot\nabla V_{ext}$ as a radial force. But there is an important thing to notice, this force is inwards for outgoing waves and outwards for incoming waves; it is also bigger, the bigger $|x|$ is, hence waves would tend to localize on the origin.
+
+There's a problem with the las term in finding a dispersion relation. What to do?
+
+\subsection*{Idea from Roberto}
+Roberto observes that elementary excitations tend to go to the surface, and they appear to move constrained to it. If one proposes the ansatz $\ru = Ae^{i\bm{k}\cdot\bm{x} - i\omega t}$, then waves that behave as the ones that Roberto described, must be such that $\nabla \ru\cdot\bm{x} = 0$, for $\bm{L}$ a vector on the surface of the confined gas. Should this be wrong, then this term introduces a size of the system, by means of proposing a value for $L$.
+\end{document}
